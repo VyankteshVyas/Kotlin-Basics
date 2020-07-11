@@ -1,0 +1,9 @@
+val g:String ="Pulkit"
+
+fun main(args: Array<String>){
+    // In kotlin we can do println(g+" Aggarwal") another way
+    // to do string concatenation is do concatination inside " " only
+    println("This is $g Aggarwal and my first name length is ${g.length}");
+    println("This is " +g.capitalize() +" Aggarwal and my first name length is ${g.length}");
+
+}

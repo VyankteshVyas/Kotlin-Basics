@@ -1,0 +1,15 @@
+fun main(args: Array<String>){
+    val a="Hello World from variable"
+    //here we have not given any type to variable
+    //Kotlin does type inference. It means it automatically detects the type of vairiable
+    //on basis of right side.
+    //Let's say if you want to bound this variable to specific type.
+    val b: String ="Hello World"
+    val c: Int =10
+    val d: Boolean =false
+    val e: Float =10.0F
+    val f:Double =10.9
+    println(b)
+    println(a)
+
+}

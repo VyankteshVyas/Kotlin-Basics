@@ -1,0 +1,21 @@
+fun main(args: Array<String>){
+    val a="Hello World from variable"
+    //here we have not given any type to variable
+    //Kotlin does type inference. It means it automatically detects the type of vairiable
+    //on basis of right side.
+    //Let's say if you want to bound this variable to specific type.
+    val b: String ="Hello World"
+    val c: Int =10
+    val d: Boolean =false
+    val e: Float =10.0F
+    //val is called value. Val cannot be reassigned
+    val f:Double =10.9
+    //var is variable. It can be reassigned
+    var g="Pulkit"
+    //In var when you reassign a value to a variable then you cannot
+    //change the type of value reassigned to variable. It it was previouly
+    //assigned string then now also it will be assigned the same.
+    println(b)
+    println(a)
+
+}

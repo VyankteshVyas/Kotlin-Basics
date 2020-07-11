@@ -1,0 +1,16 @@
+lateinit var f:String
+//lateinit means initializing late.
+//while using lateinit with a var we have to specify the type of var
+//like here we specified String. We cannot write something like this lateinit var f. It is wrong.
+
+val g:String ="Pulkit"
+//you have to intialize val at the time of declaration only.
+
+fun main(args: Array<String>){
+    f="Agarwal"
+    //we have to initialize the lateinit variable before using it
+    //otherwise we will get error.
+    println(f)
+    println(g)
+
+}

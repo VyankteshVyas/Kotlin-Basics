@@ -1,0 +1,41 @@
+//In kotlin there are only two things about variable
+//Either it is null or not null
+//if i write var f:String = null then i will get Comp time error
+var f:String? = null
+//Here ? is used whenever you are not sure whether this variable will
+//null or not null
+
+
+val g:String ="Pulkit"
+//you have to intialize val at the time of declaration only.
+
+fun main(args: Array<String>){
+    //now if i call f.length with an null initialized f
+    //we will get error. val size=f.length. what we can do now
+    val size=f?.length;
+    println(size) //here outputll will be "null"
+
+    //If we want this size to be null then we write
+    //val size:Int=f?.length. We will get comp time error
+    //because the required variable is int and you are getting null
+    //so you set a null value to a not null variable
+
+    //val size:Int=f?.length. In this case if we press Alt+Enter
+    //we get two options 1) change type of 'size' to 'Int?'
+    //2) Add a not null asserted (!!) call
+    //If you do 2) type i.e. val size:Int=f?.length!!
+    //you will get a crash of kotlinNUllPointerException
+    // What do you mean by !! . It means irrespective of the variable after
+    //which you are putting !! that variable will be not null. !! is used by us
+    //when we initially initialize the variable with null but we are sure that
+    //before using that variable we will be initializing it. So that we can use
+    //it without error. But here we didn't initialize it and that's why it got crashed
+
+    //To deal with this issue of using !! to a variable and not initializing it before use
+    //we can do the following val size:Int=f?.length ?: 0. It means that if f?.length is null then
+    //we can assign 0 as it's output.
+    // ?: is called Elvis operator of Kotlin.
+    val sizee:Int=f?.length ?: 6
+    println(sizee)
+    
+}
