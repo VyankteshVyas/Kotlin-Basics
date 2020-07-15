@@ -1,0 +1,33 @@
+//arrayof works on vararg
+//[vararg] : It tells you can have n no. of arguments inside any function
+val numbers = arrayOf(1,2,3,4)
+val name = arrayOf("1","2","3")
+//here in val name = arrayOf("1","2","3") we can pass integers also
+//because we haven't given type to this particular array
+
+val nameStr = arrayOf<String>("1","2","3")
+//here in val nameStr = arrayOf<String>("1","2","3") we can not pass integers
+//we can only pass string.If we pass anything else we get error
+
+//since array is the class inside kotlin. So you can use array constructor also
+val num=Array(5,{i->i*1})
+//The expression inside array constructor means that assign the ith index value
+//as i*1. So if we print the num array we get 0 1 2 3 4
+
+//For primitive data type like int,short etc you can also use their primitive array
+val numArray= intArrayOf(1)//It will only take integer values
+
+//To make a null array you have a special array called array of nulls
+val nullArray= arrayOfNulls<String>(10)
+
+fun main(args: Array<String>){
+    //To get the value of i th index you can do the following syntax
+    println(num.get(1))
+    println(num[1])
+    //If we write nameStr.set(3,"4"). So it will give indexoutofbound exception
+    //because our array is declared till 2nd index only.
+
+    //we can definetly write
+    nameStr.set(2,"4")
+    println(nameStr[2])
+}

@@ -1,0 +1,33 @@
+//Lists or collections
+val listOfNames = listOf<String>("Hello","World","Pulkit")
+//By default list is immutable in kotlin i.e. we cannot add more it.
+//Even if it was var instead of val then also it will be immutable because
+//it does not have method add to add any item
+//To overcome this problem we have mutablelistof.
+var mutableListOfNames = mutableListOf<String>("Hello","World","Pulkit")
+//arrayListOf is by default mutable and it is more frequently used then mutablelist
+var mutableArrayListOfNames = arrayListOf<String>("Hello","World","Pulkit")
+//mapOf is immutable
+val mapOfNames= mapOf<Int,String>(0 to "Pulkit", 1 to "Vanki",2 to "C2")
+//Here in mapOf we have not defined the type of key value pair so we can have
+//any type of key value pair
+val mapiofNames=mapOf(0 to "Pulki",3 to 7)
+//Hashmap is mutable
+val hashMapOfNames= hashMapOf(0 to "Pulki",3 to 7)
+
+fun main(args: Array<String>){
+    mutableListOfNames.add("Aggarwal")
+    hashMapOfNames[4] = "C2"
+
+    //Using for each loop
+    hashMapOfNames.forEach{any , any2 ->
+        println("" + any + any2)
+    }
+
+    mutableArrayListOfNames.forEach {
+        println(it)
+    }
+
+
+
+}
